@@ -1,0 +1,6 @@
+@CompanyEmployeesOnionArchitecture_HostAddress = http://localhost:5076
+
+GET {{CompanyEmployeesOnionArchitecture_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
