@@ -17,6 +17,9 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\External\External.csproj" />
     <ProjectReference Include="..\Persistence\Persistence.csproj" />
+    <ProjectReference Include="..\Presentation\Presentation.csproj" />
+    <ProjectReference Include="..\Service.Abstractions\Service.Abstractions.csproj" />
+    <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>
 
 </Project>

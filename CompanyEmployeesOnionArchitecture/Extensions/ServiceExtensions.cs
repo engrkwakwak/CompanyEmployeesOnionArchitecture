@@ -1,6 +1,10 @@
 ﻿using Domain.Repositories;
 using External.LoggerService;
+using Microsoft.EntityFrameworkCore;
+using Persistence;
 using Persistence.Repositories;
+using Service.Abstractions;
+using Services;
 using System.Runtime.CompilerServices;
 
 namespace CompanyEmployeesOnionArchitecture.Extensions;
@@ -27,4 +31,11 @@ public static class ServiceExtensions
 
     public static void ConfigureRepositoryManager(this IServiceCollection services) =>
         services.AddScoped<IRepositoryManager, RepositoryManager>();
+
+    public static void ConfigureServiceManager(this IServiceCollection services) =>
+        services.AddScoped<IServiceManager, ServiceManager>();
+
+    public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration configuration) =>
+        services.AddDbContext<RepositoryContext>(opts =>
+            opts.UseSqlServer(configuration.GetConnectionString("SqlConnection")));
 }

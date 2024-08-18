@@ -8,6 +8,8 @@ public class CompanyConfiguration : IEntityTypeConfiguration<Company>
 {
     public void Configure(EntityTypeBuilder<Company> builder)
     {
+        builder.ToTable("Companies");
+
         builder.HasData
         (
             new Company

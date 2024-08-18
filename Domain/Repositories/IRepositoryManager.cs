@@ -3,6 +3,6 @@
 public interface IRepositoryManager
 {
     ICompanyRepository Company { get; }
-    IEmployeeRepository Repository { get; }
+    IEmployeeRepository Employee { get; }
     void Save();
 }
